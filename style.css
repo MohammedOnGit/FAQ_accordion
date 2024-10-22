@@ -1,0 +1,286 @@
+ :root {
+   --white: hsl(0, 0%, 100%);
+   --light-pink: hsl(275, 100%, 97%);
+   --grayish-purple: hsl(292, 16%, 49%);
+   --dark-purple: hsl(292, 42%, 14%);
+ }
+
+ * {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+ }
+
+
+ body {
+   min-height: 667px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: flex-start;
+ }
+
+ .container {
+   width: 42%;
+   height: 568px;
+   margin-top: 168px;
+   background-color: var(--white);
+   border-radius: 1rem;
+   overflow-y: auto;
+   scrollbar-width: thin;
+
+ }
+
+
+
+
+ body {
+   font-family: "Work Sans", system-ui;
+   background-image: url("assets/images/background-pattern-desktop.svg");
+   background-repeat: no-repeat;
+   font-style: normal;
+ }
+
+ .faq_container {
+   display: grid;
+   grid-template-columns: 108px 1fr;
+   align-items: center;
+   padding-top: 40px;
+ }
+
+ .aside_header {
+   font-weight: 700;
+   font-size: 3.5rem;
+
+ }
+
+ .star_image {
+   padding-left: 2.6rem;
+ }
+
+ summary {
+   font-size: 1.2rem;
+   font-weight: 700;
+   margin-left: 4px;
+   letter-spacing: -0.6px;
+   display: flex;
+   align-items: center;
+ }
+
+
+ summary::marker {
+   content: none;
+ }
+
+ details summary::before {
+
+   position: relative;
+   left: 33rem;
+   content: "";
+   display: inline-block;
+   width: 31px;
+   height: 33px;
+   padding-top: 0px;
+   margin-top: 4px;
+   background-image: url(assets/images/icon-plus.svg);
+   background-size: cover;
+   margin-right: 7px;
+ }
+
+ summary:hover{
+  color: var(--grayish-purple);
+  cursor: pointer;
+ }
+
+ [open] summary::before {
+   background-image: url("assets/images/icon-minus.svg");
+ }
+
+ details {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+ }
+
+ p {
+
+   font-weight: 400;
+   width: 90%;
+   margin-left: 2.6rem;
+   height: 157px;
+   font-size: 16px;
+   font-weight: 600;
+   padding-top: 21px;
+   line-height: 24px;
+ }
+
+
+ details:nth-of-type(1) summary {
+   padding-top: 1.7rem;
+ }
+
+ details:nth-of-type(2) summary {
+   padding-bottom: 2.5rem;
+   padding-top: 0.4rem;
+
+ }
+
+ details:nth-of-type(3) summary {
+   padding-bottom: 2rem;
+   padding-top: 0.1rem;
+ }
+
+ details:nth-of-type(4) summary {
+   padding-top: .5rem;
+ }
+
+ @media screen and (max-width: 375px) {
+   body {
+     width: 100vw;
+     height: 100vh;
+     background-size: 64rem 15rem;
+   }
+
+   .container {
+     width: 87%;
+     margin-top: 147px;
+     overflow-x: hidden;
+     border-radius: .5rem;
+   }
+
+   .faq_container {
+     padding-top: 23px;
+     grid-template-columns: 73px 1fr;
+   }
+
+   .star_image {
+     width: 48px;
+     padding-left: 23px;
+   }
+
+   .aside_header {
+     font-size: 2rem;
+   }
+
+   summary {
+     font-size: 16px;
+     letter-spacing: .1px;
+     width: 96%;
+   }
+
+   details:nth-of-type(1) summary {
+     padding-top: 24px;
+     margin-left: -12px;
+     width: 80%;
+   }
+
+   details:nth-of-type(2) summary {
+     padding-top: 35px;
+     margin-left: -13px;
+     width: 80%;
+   }
+
+   details:nth-of-type(3) summary {
+     padding-top: 1px;
+     margin-left: -10px;
+     width: 80%;
+   }
+
+   details:nth-of-type(4) summary {
+    padding-top: .6rem;
+    width: 82%;
+    margin-left: -14px;
+   }
+
+   details {
+     width: 100%;
+   }
+
+   details summary::before {
+     position: relative;
+     left: 17rem;
+     content: "";
+     display: inline-block;
+     width: 23px;
+     height: 25px;
+     padding-top: 0px;
+     margin-top: 4px;
+     background-image: url(assets/images/icon-plus.svg);
+     background-size: cover;
+     margin-right: 7px;
+   }
+
+
+   details:nth-of-type(1) summary::before {
+     width: 52px;
+     margin-top: 0px;
+     height: 31px;
+     left: 284px;
+   }
+
+   details:nth-of-type(2) summary::before {
+     width: 29px;
+     margin-top: 0px;
+     height: 29px;
+     left: 288px;
+   }
+
+   details:nth-of-type(3) summary::before {
+     width: 49px;
+     margin-top: 0px;
+     height: 29px;
+     left: 285px;
+   }
+
+   details:nth-of-type(4) summary::before {
+     width: 49px;
+     margin-top: 0px;
+     height: 29px;
+     left: 285px;
+   }
+
+   p {
+     margin-left: 1.5rem;
+     font-size: 14px;
+     line-height: 21px;
+     padding-top: 24px;
+     font-weight: 400;
+    
+     width: 85%;
+   }
+
+ }
+
+ @media screen and (max-width: 1440px) {
+  .container {
+    width: 42%;
+    height: 568px;
+    margin-top: 168px;
+    background-color: var(--white);
+    border-radius: 1rem;
+    overflow-y: auto;
+    scrollbar-width: thin;
+ 
+  }
+  .faq_container{
+    grid-template-columns: 105px 1fr
+  }
+
+  details:nth-of-type(1) summary {
+    padding-top: 1.8rem;
+}
+  summary{
+    margin-left: 3px;
+  }
+  details:nth-of-type(3) summary{
+    padding-top: 1px;
+  }
+
+  details:nth-of-type(4) summary {
+    padding-top: 10px;
+
+}
+p{
+  font-weight: 400;
+}
+ }
